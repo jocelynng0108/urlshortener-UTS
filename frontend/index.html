@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Shorten Link + QR</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Pemendek URL sederhana + QR — Tailwind + Node.js + Docker + CI/CD"/>
+</head>
+<body class="bg-slate-50 min-h-screen flex items-center justify-center p-6">
+  <main class="w-full max-w-4xl bg-white rounded-2xl shadow-lg p-8">
+    <header class="flex items-start justify-between mb-6">
+      <div>
+        <h1 class="text-2xl font-semibold">Shorten Link + QR</h1>
+        <p class="text-sm text-slate-500 mt-1">Perpendek URL dengan cepat dan generate QR code untuk link nya.</p>
+      </div>
+      <div class="text-xs text-slate-400">Tugas : <strong class="text-slate-700">UTS</strong></div>
+    </header>
+
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div>
+        <label class="block mb-2 text-sm font-medium text-slate-700">URL Asli</label>
+        <input id="urlInput" type="url" placeholder="https://contoh.com/link/panjang" class="w-full rounded-lg border p-3 mb-3"/>
+
+        <label class="block mb-2 text-sm font-medium text-slate-700">URL custom (opsional)</label>
+        <input id="slugInput" type="text" placeholder="kode-saya" class="w-full rounded-lg border p-3 mb-3"/>
+
+        <div class="flex gap-3">
+          <button id="shortenBtn" class="px-4 py-2 bg-blue-600 text-white rounded-lg">Shorten</button>
+          <button id="copyBtn" class="px-4 py-2 bg-slate-100 rounded-lg">Salin</button>
+          <button id="qrBtn" class="px-4 py-2 bg-slate-100 rounded-lg">Buat QR</button>
+        </div>
+
+        <div class="mt-4 text-sm text-slate-600">
+          <div>URL Pendek:</div>
+          <div id="shortUrl" class="mt-1 font-medium text-blue-600 break-words"></div>
+          <div id="info" class="mt-2 text-xs text-slate-500"></div>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center justify-center gap-4">
+        <div id="qrBox" class="bg-white p-4 rounded-lg shadow-sm w-full flex flex-col items-center">
+          <img id="qrImage" src="" alt="QR Code" style="width:300px;height:300px;object-fit:contain;" />
+        </div>
+        <div class="flex gap-3">
+          <button id="downloadQrBtn" class="px-4 py-2 bg-green-600 text-white rounded-lg">Unduh QR</button>
+          <button id="openShortBtn" class="px-4 py-2 bg-slate-100 rounded-lg">Buka URL Pendek</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-6 text-xs text-slate-400">
+      Catatan: Data disimpan sementara (sementara/hilang saat restart). Untuk produksi, tambahkan database.
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
