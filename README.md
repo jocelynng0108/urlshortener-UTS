@@ -18,7 +18,6 @@ docker-compose up --build
 ## CI/CD (GitHub Actions)
 - Adds workflow to build images and push to Docker Hub.
 - Set secrets: DOCKERHUB_USERNAME, DOCKERHUB_TOKEN
-- Optional deploy to server via SSH: set SSH_HOST, SSH_USER, SSH_PRIVATE_KEY
 
 ## Notes
 - Storage currently in-memory: restart clears data. For production add DB (Redis/MySQL).
