@@ -1,3 +1,15 @@
+---
+
+## 👥 Kelompok Bug4Fun
+| No | Nama Lengkap | NIM | Peran |
+|----|---------------|-----|-------|
+| 1 | **Samuel G. Christian Pakpahan** | 221113531 | Ketua / Fullstack Developer |
+| 2 | **Jocelyn** | 221110108 | Frontend Developer |
+| 3 | **Maesi** | 221112816 | Backend Developer |
+| 4 | **Sontiar Eseria Tampubolon** | 221112223 | DevOps & Dokumentasi |
+
+---
+
 # URL Shortener + QR
 
 Simple URL shortener with QR generation.
